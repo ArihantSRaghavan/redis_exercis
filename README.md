@@ -55,9 +55,9 @@ sudo docker build -t redis_self:latest .
 ```
 Push the image to the Private Repository 
 ```
-sudo docker iamge tag redis_self:latest <IP_Address>:31320/arihantsr/redis:latest
+sudo docker iamge tag redis_self:latest <IP_Address>:31320/<username>/redis:latest
 ```
-Add your IP on the redis-deployment.yaml and craete the redis service and deployment. 
+Add Image name on the redis-deployment.yaml and craete the redis service and deployment. 
 ```
 kubectl create -f redis-service.yaml
 kubectl create -f redis-deployment.yaml
