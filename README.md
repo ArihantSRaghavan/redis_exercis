@@ -62,3 +62,17 @@ Add your IP on the redis-deployment.yaml and craete the redis service and deploy
 kubectl create -f redis-service.yaml
 kubectl create -f redis-deployment.yaml
 ```
+The Redis pod should be running 
+```
+kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+redis-645f9789d5-w47kk   1/1     Running   0          125m
+```
+Checking if the redis-server is running by using redis-cli: 
+```
+kubectl exec --stdin --tty redis-645f9789d5-w47kk -- redis-cli
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379> 
+```
+
