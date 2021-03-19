@@ -8,3 +8,8 @@ cd $HOME/
 git clone gh repo clone ArihantSRaghavan/redis_exercis
 cd redis_exercis
 ```
+Make sure you are deploying the following deployment on kube-system namespace (Masternode). 
+```
+kubectl create -f privaterepo-service.yaml
+kubectl create -f privaterepo-deployment.yaml
+```
