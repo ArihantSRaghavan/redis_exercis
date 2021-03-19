@@ -75,4 +75,4 @@ kubectl exec --stdin --tty redis-645f9789d5-w47kk -- redis-cli
 PONG
 127.0.0.1:6379> 
 ```
-
+You can make specific changes on start.sh to alter the way you want to start the container. 
