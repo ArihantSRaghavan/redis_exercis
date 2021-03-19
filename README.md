@@ -46,8 +46,19 @@ make
 ```
 This will Pull in all the binarys to run redis-server and redis-cli are available at redis-stable/src
 You can use use the redis.conf available at redis-stable file to make appropriate changes as per your needs.
-On successfull Build Use the Dockerfile to build the image. 
+On successfull Build copy the copy start.sh to redis-stabe. Use the Dockerfile to build the image. 
 ```
 cd $HOME/redis_exercis
+chmod a+x start.sh
+cp start.sh ./redis-stable/
 sudo docker build -t redis_self:latest .
+```
+Push the image to the Private Repository 
+```
+sudo docker iamge tag redis_self:latest <IP_Address>:31320/arihantsr/redis:latest
+```
+Add your IP on the redis-deployment.yaml and craete the redis service and deployment. 
+```
+kubectl create -f redis-service.yaml
+kubectl create -f redis-deployment.yaml
 ```
