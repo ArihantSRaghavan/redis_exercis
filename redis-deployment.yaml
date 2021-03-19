@@ -15,7 +15,7 @@ spec:
         app: redis
     spec:
       containers:
-              - image: 129.40.58.225:31320/arihantsr/redis:latest
+              - image: <yourIP>:31320/<Username>/redis:latest
                 name: redis
                 imagePullPolicy: IfNotPresent
                 ports:
